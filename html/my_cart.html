@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Homepage.css">
+    <title>Grocery Basket</title>
+</head>
+<body>
+     
+<header>
+        <div class="container-fluid bg-light">  
+            
+      <nav class="navbar navbar-expand-lg navbar-light container">
+    <img src="../images/shopping-basket.png" width="50" class="mr-3"> <a class="navbar-brand" href="../html/Homepage.html" style="font-size:22px">Grocery Basket</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline my-2 my-lg-0 m-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav ml-auto">
+
+         <li class="nav-item active mr-2">
+        <a class="nav-link" href="../html/Homepage.html" id="links" style="font-size:18px">Home</a>
+      </li>
+      <li class="nav-item active  mr-2">
+        <a class="nav-link" href="#category"  id="links" style="font-size:18px">Category</a>
+      </li>
+       
+      <li class="nav-item active  mr-2">
+        <a class="nav-link" href="../html/productspage.html"  id="links" style="font-size:18px">Products</a>
+      </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="../html/Contact.html"  id="links" style="font-size:18px">Contact</a>
+      </li>
+
+      <li class="nav-item active ml-md-5 ml-0 icon">
+        <a class="nav-link" href="../html/Loginpage.html" style="font-size:22px"><i class="far fa-user-circle"></i></a>
+      </li>
+
+      <li class="nav-item active icon">
+        <a class="nav-link" href="../html/my_cart.html" style="font-size:22px"><i class="fas fa-cart-arrow-down"></i></a>
+      </li>
+    </ul>
+  
+  </div>
+</nav>      
+   </div>          
+     
+  
+    
+</header>
+ 
+
+      <div class="container" id="cart-page">
+        <table id="table">
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr id="1">
+            <td>
+              <div class="cart-info">
+                <img src="../images/product-6.png" width="160" alt="">
+                <div class="">
+                  <p class="d-none d-md-block m-0 p-0">Almonds</p>
+                  <small>Prize: <span style="color: green;">₹299</span></small><br>
+                  <a href="#" onclick="remove(1,299)">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" min="1" max="5" value="1"></td>
+            <td>₹299</td>
+          </tr>
+
+          <tr id="2">
+            <td>
+              <div class="cart-info">
+                <img src="../images/product-7.png" width="160" alt="">
+                <div class="">
+                  <p class="d-none d-md-block m-0">Apples</p>
+                  <small>Prize: <span style="color: green;">₹199</span></small><br>
+                  <a href="#" onclick="remove(2,199)">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" min="1" max="5" value="1"></td>
+            <td>₹199</td>
+          </tr>
+
+          <tr id="3">
+            <td>
+              <div class="cart-info">
+                <img src="../images/product-4.png" width="160" alt="">
+                <div class="">
+                  <p class="d-none d-md-block m-0">Milk</p>
+                  <small>Prize: <span style="color: green;">₹99</span></small><br>
+                  <a href="#" onclick="remove(3,99)">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" min="1" max="5" value="1"></td>
+            <td>₹99</td>
+          </tr>
+
+          <tr id="4">
+            <td>
+              <div class="cart-info">
+                <img src="../images/product-5.png" width="160" alt="">
+                <div class="">
+                  <p class="d-none d-md-block m-0">Graps</p>
+                  <small>Prize: <span style="color: green;">₹246</span></small><br>
+                  <a href="#" onclick="remove(4,246)">Remove</a>
+                </div>
+              </div>
+            </td> 
+            <td><input type="number" min="1" max="5" value="1"></td>
+            <td>₹246</td>
+          </tr>
+
+          <tr id="5">
+            <td>
+              <div class="cart-info">
+                <img src="../images/product-9.png" width="160" alt="">
+                <div class="">
+                  <p class="d-none d-md-block m-0">Carrot</p>
+                  <small>Prize: <span style="color: green;">₹59</span></small><br>
+                  <a href="#" onclick="remove(5,59)">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" min="1" max="5" value="1"></td>
+            <td>₹59</td>
+          </tr>
+        </table>
+
+        <div class="total-prize">
+          <table id="table">
+            <tr>
+              <td>Subtotal</td>
+              <td id="subtot">₹902</td>
+            </tr>
+            <tr>
+              <td>tax</td>
+              <td id="tx">₹100</td>
+            </tr>
+            <tr>
+              <td>total</td>
+              <td id="tot">₹1002</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+           <a href="../html/Homepage.html"  style="text-decoration:none;"><img src="../images//shopping-basket.png" width="50px" heigth="50px"><h2>Grocery Basket</h2></a>
+
+               <div class="share">
+                 <a href="#" style="color:white;" class="btn fab fa-facebook-f bg-success"></a>
+                <a href="#" style="color:white;" class="btn fab fa-twitter bg-success"></a>
+                <a href="#" style="color:white;" class="btn fab fa-instagram bg-success"></a>
+                <a href="#" style="color:white;" class="btn fab fa-linkedin bg-success"></a>
+             </div>
+        </div>
+        
+       
+
+        <div class="box">
+            <h3>quick links</h3>
+            <div class="links">
+                <a href="../html/Homepage.html" style="text-decoration:none;">home</a>
+                <a href="#category" style="text-decoration:none;">category</a>
+                <a href="../html/productspage.html" style="text-decoration:none;">product</a>
+            
+                <a href="../html/Contact.html" style="text-decoration:none;">contact</a>
+           
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>download app</h3>
+            <div class="links">
+                <a href="#" style="text-decoration:none;">google play</a>
+              
+                <a href="#" style="text-decoration:none;">app store</a>
+            </div>
+        </div>
+
+    </div>
+
+   </section>
+
+       
+    <script>
+      var subTotal = 902;
+      var tax = 100;
+      var total = 1002;
+      function remove(x,y){
+        document.getElementById(x).style.display = "none";
+        subTotal = subTotal-y;
+        tax = tax-20;
+        total = subTotal + tax;
+        document.getElementById('subtot').innerHTML = subTotal;
+        document.getElementById('tx').innerHTML = tax;
+        document.getElementById('tot').innerHTML = total;
+      }
+    </script>
+
+    <script src="https://kit.fontawesome.com/f1c0b978a7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
